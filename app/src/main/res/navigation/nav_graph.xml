@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/brakingnewsFragment">
+
+    <fragment
+        android:id="@+id/brakingnewsFragment"
+        android:name="com.example.mynewsapp.ui.fragment.BrakingnewsFragment"
+        android:label="brakingnewsfragment"
+        tools:layout="@layout/brakingnewsfragment" >
+        <action
+            android:id="@+id/action_brakingnewsFragment_to_articlenewsFragment"
+            app:destination="@id/articlenewsFragment"
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/articlenewsFragment"
+        android:name="com.example.mynewsapp.ui.fragment.ArticlenewsFragment"
+        android:label="articlenewsfragment"
+        tools:layout="@layout/articlenewsfragment" >
+        <argument
+            android:name="article"
+            app:argType="com.example.mynewsapp.model.Article"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedNewsFragment"
+        android:name="com.example.mynewsapp.ui.fragment.SavedNewsFragment"
+        android:label="savednewsfragment"
+        tools:layout="@layout/savednewsfragment" >
+        <action
+            android:id="@+id/action_savedNewsFragment_to_articlenewsFragment"
+            app:destination="@id/articlenewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchnewsFragment"
+        android:name="com.example.mynewsapp.ui.fragment.SearchnewsFragment"
+        android:label="searchnewsfragment"
+        tools:layout="@layout/searchnewsfragment" >
+        <action
+            android:id="@+id/action_searchnewsFragment_to_articlenewsFragment"
+            app:destination="@id/articlenewsFragment" />
+    </fragment>
+</navigation>
