@@ -84,6 +84,7 @@ class BrakingnewsFragment : Fragment(),NewsAdapter.onArticleItemclick {
                       }
                   }
 
+
                }
                is Resource.Error->{
                    hideprogressbar()
